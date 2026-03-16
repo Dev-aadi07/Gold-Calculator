@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Critical for mobile responsiveness — without this the app looks tiny on phones -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <!-- PWA / Mobile meta tags — makes it feel native -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#0f0a00" />
+
+    <!-- App description for SEO / share cards -->
+    <meta name="description" content="Gold price calculator for jewellery shops. Calculate gold value with making charges." />
+
+    <title>Gold Calculator — Jewellery Shop Tool</title>
+
+    <!-- Favicon emoji (works on most modern browsers) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💛</text></svg>" />
+  </head>
+  <body>
+    <!-- React mounts here -->
+    <div id="root"></div>
+    <!-- Vite injects the bundled JS automatically -->
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
