@@ -1,22 +1,33 @@
-// vite.config.js
-// ---------------
-// Standard Vite + React config.
-// The @vitejs/plugin-react plugin enables:
-//   - Fast Refresh (hot reload without losing state)
-//   - JSX transform (no need to import React in every file)
-
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+import { defineConfig } from "vite"
+import react from "@vitejs/plugin-react"
+import { VitePWA } from "vite-plugin-pwa"
 
 export default defineConfig({
-  plugins: [react()],
-
-  // When building for Capacitor, set base to "./" so assets resolve correctly
-  // base: "./",
-
-  server: {
-    port: 5173,
-    // Allow access from phones on same WiFi (useful for testing)
-    host: true,
-  },
-});
+  plugins: [
+    react(),
+    VitePWA({
+      registerType: "autoUpdate",
+      manifest: {
+        name: "Gold Calculator",
+        short_name: "GoldCalc",
+        description: "Gold price calculator for jewellery shops",
+        theme_color: "#000000",
+        background_color: "#000000",
+        display: "standalone",
+        start_url: "/",
+        icons: [
+          {
+            src: "/icon-192.png",
+            sizes: "192x192",
+            type: "image/png"
+          },
+          {
+            src: "/icon-512.png",
+            sizes: "512x512",
+            type: "image/png"
+          }
+        ]
+      }
+    })
+  ]
+})
