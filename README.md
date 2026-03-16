@@ -118,7 +118,7 @@ and serves the `dist` folder.
 ---
 
 ## 📸 Preview
-![screenshot](./screenshot.png) <!-- optional if you add one -->
+![screenshot](./public/screenshot.png) <!-- optional if you add one -->
 
 Live preview:
 
